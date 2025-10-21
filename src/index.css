@@ -55,3 +55,23 @@
     font-family: var(--font-inter);
   }
 }
+
+.css-1u9des2-indicatorSeparator{
+  display: none;
+}
+
+.react-select__menu-list {
+  scrollbar-width: thin; /* Firefox */
+}
+
+.react-select__menu-list::-webkit-scrollbar {
+  width: 6px; /* Lebar scrollbar */
+}
+
+.react-select__menu-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.react-select__menu-list::-webkit-scrollbar-track {
+  background: transparent;
+}
