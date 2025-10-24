@@ -18,7 +18,7 @@ const banner = () => {
               <button className="btn-orange">View all cars</button>
             </div>
           </div>
-          <FormBanner />  
+          <FormBanner />
         </div>
       </section>
     </>

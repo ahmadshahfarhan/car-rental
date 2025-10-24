@@ -1,37 +1,55 @@
-import {
-  Combobox,
-  ComboboxButton,
-  ComboboxInput,
-  ComboboxOption,
-  ComboboxOptions,
-} from "@headlessui/react";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
-import clsx from "clsx";
-import { useState } from "react";
+"use client";
 
-const people = [
-  { id: 1, name: "Tom Cook" },
-  { id: 2, name: "Wade Cooper" },
-  { id: 3, name: "Tanya Fox" },
-  { id: 4, name: "Arlene Mccoy" },
-  { id: 5, name: "Devon Webb" },
-  { id: 6, name: "Tom Cook" },
-  { id: 7, name: "Wade Cooper" },
-  { id: 8, name: "Tanya Fox" },
-  { id: 9, name: "Arlene Mccoy" },
-  { id: 10, name: "Devon Webb" },
+import * as React from "react";
+import { CheckIcon, ChevronDown } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import { Button } from "../../../ui/button";
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "../../../ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "../../../ui/popover";
+
+const frameworks = [
+  {
+    value: "next.js",
+    label: "Next.js",
+  },
+  {
+    value: "sveltekit",
+    label: "SvelteKit",
+  },
+  {
+    value: "nuxt.js",
+    label: "Nuxt.js",
+  },
+  {
+    value: "remix",
+    label: "Remix",
+  },
+  {
+    value: "astro",
+    label: "Astro",
+  },
+  {
+    value: "blitz",
+    label: "Blitz",
+  },
+  {
+    value: "strapi",
+    label: "Strapi",
+  },
 ];
 
 const FormBanner = () => {
-  const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState(null);
-
-  const filteredPeople =
-    query === ""
-      ? people
-      : people.filter((person) => {
-          return person.name.toLowerCase().includes(query.toLowerCase());
-        });
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState(null);
 
   return (
     <section>
@@ -41,49 +59,60 @@ const FormBanner = () => {
             Book your car
           </label>
 
-          <Combobox
-            value={selected}
-            onChange={(value) => setSelected(value)}
-            onClose={() => setQuery("")}
-          >
-            <div className="relative w-full">
-              <ComboboxButton className="w-full">
-                <ComboboxInput
-                  className={clsx(
-                    "w-full rounded-[12px] border-none outline-none bg-alt py-2 pr-8 pl-3 text-[16px] text-text-main font-normal font-worksans"
-                  )}
-                  placeholder="Car type"
-                  displayValue={(person) => person?.name}
-                  onChange={(event) => setQuery(event.target.value)}
-                />
-              </ComboboxButton>
-              <ComboboxButton className="group absolute inset-y-0 right-0 px-2.5">
-                <ChevronDownIcon className="size-5 fill-text-main group-data-hover:fill-text-muted" />
-              </ComboboxButton>
-            </div>
-
-            <ComboboxOptions
-              anchor="bottom"
-              transition
-              className={clsx(
-                "w-(--input-width) rounded-xl border border-white/5 backdrop-blur-2xl bg-white/5 p-1 [--anchor-gap:--spacing(1)] empty:invisible",
-                "transition duration-100 ease-in data-leave:data-closed:opacity-0"
-              )}
+          <Popover open={open} onOpenChange={setOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                role="combobox"
+                aria-expanded={open}
+                className="w-full justify-between border-0 outline-none bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px]"
+              >
+                {value
+                  ? frameworks.find((framework) => framework.value === value)
+                      ?.label
+                  : "Car type"}
+                <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent
+              style={{ minWidth: "var(--radix-popover-trigger-width)" }}
+              className="w-full p-0 bg-surface shadow-gray-500 border-0 outline-0 rounded-xl"
             >
-              {filteredPeople.map((person) => (
-                <ComboboxOption
-                  key={person.id}
-                  value={person}
-                  className="group flex cursor-default items-center gap-2 rounded-lg px-3 py-1.5 select-none data-focus:bg-white/10"
-                >
-                  <CheckIcon className="invisible size-4 text-green-300 group-data-selected:visible" />
-                  <div className="text-[14px] text-text-main font-normal font-worksans">
-                    {person.name}
-                  </div>
-                </ComboboxOption>
-              ))}
-            </ComboboxOptions>
-          </Combobox>
+              <Command>
+                <CommandInput
+                  className=" placeholder:font-worksans placeholder:text-xs"
+                  placeholder="Search car type"
+                />
+                <CommandList>
+                  <CommandEmpty className=" font-worksans font-normal text-xs text-center py-2">
+                    No car type found.
+                  </CommandEmpty>
+                  <CommandGroup className=" font-worksans">
+                    {frameworks.map((framework) => (
+                      <CommandItem
+                        className="cursor-pointer flex-row-reverse justify-between"
+                        key={framework.value}
+                        value={framework.value}
+                        onSelect={(currentValue) => {
+                          setValue(currentValue === value ? "" : currentValue);
+                          setOpen(false);
+                        }}
+                      >
+                        <CheckIcon
+                          className={cn(
+                            "h-4 w-4",
+                            value === framework.value
+                              ? "opacity-100 text-green-400"
+                              : "opacity-0"
+                          )}
+                        />
+                        {framework.label}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
 
           <button
             type="submit"

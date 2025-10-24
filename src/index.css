@@ -22,13 +22,15 @@
 @import "@fontsource/inter/500.css"; /* medium */
 @import "@fontsource/inter/600.css"; /* semi-bold */
 @import "@fontsource/inter/700.css"; /* bold */
-@import "@fontsource/inter/800.css"; /* extra-bold */
+@import "@fontsource/inter/800.css"; /* extra-bold */      
 
 @import "@fontsource/work-sans/400.css"; /* regular */
 @import "@fontsource/work-sans/500.css"; /* medium */
 @import "@fontsource/work-sans/600.css"; /* semi-bold */
 @import "@fontsource/work-sans/700.css"; /* bold */
-@import "@fontsource/work-sans/800.css"; /* extra-bold */
+@import "@fontsource/work-sans/800.css";
+@import "tw-animate-css";
+
 
 :root {
   --font-inter: "Inter", sans-serif;
@@ -55,24 +57,4 @@
     @apply text-surface bg-accent py-[10.5px] px-[28px] font-semibold text-[16px] rounded-[12px];
     font-family: var(--font-inter);
   }
-}
-
-.css-1u9des2-indicatorSeparator{
-  display: none;
-}
-
-.react-select__menu-list {
-  scrollbar-width: thin; /* Firefox */
-}
-
-.react-select__menu-list::-webkit-scrollbar {
-  width: 6px; /* Lebar scrollbar */
-}
-
-.react-select__menu-list::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-
-.react-select__menu-list::-webkit-scrollbar-track {
-  background: transparent;
 }
