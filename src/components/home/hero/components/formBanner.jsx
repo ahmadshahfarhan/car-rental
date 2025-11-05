@@ -42,10 +42,7 @@ const frameworks = [
 
 const FormBanner = () => {
   const [open, setOpen] = React.useState(null);
-  const [date, setDate] = React.useState();
-  const [returnDate, setReturnDate] = React.useState();
   const [month, setMonth] = React.useState();
-
   const [value, setValue] = React.useState({
     carType: "",
     placeOfRental: "",
@@ -54,10 +51,15 @@ const FormBanner = () => {
     returnDate: "",
   });
 
+  // state rental date
+  const [date, setDate] = React.useState();
+  // state return date
+  const [returnDate, setReturnDate] = React.useState();
+
   return (
     <section>
-      <div className="bg-surface rounded-[20px] w-[416px]">
-        <form className="p-[40px] flex flex-col justify-center items-center gap-4">
+      <div className="bg-surface rounded-[20px] w-[416px] min-h-[480px] flex items-center justify-center">
+        <form className="p-[40px] flex flex-col justify-center items-center gap-4 w-full">
           <label className="font-worksans font-semibold text-[28px] text-text-main">
             Book your car
           </label>
@@ -83,7 +85,6 @@ const FormBanner = () => {
               <Command>
                 <CommandInput
                   placeholder="Search car type"
-                  className="placeholder:font-worksans placeholder:text-xs"
                 />
                 <CommandList>
                   <CommandEmpty className="font-worksans font-normal text-xs text-center py-2">
@@ -146,7 +147,6 @@ const FormBanner = () => {
             >
               <Command>
                 <CommandInput
-                  className=" placeholder:font-worksans placeholder:text-xs"
                   placeholder="Search place of rental"
                 />
                 <CommandList>
@@ -212,7 +212,6 @@ const FormBanner = () => {
             >
               <Command>
                 <CommandInput
-                  className=" placeholder:font-worksans placeholder:text-xs"
                   placeholder="Search place of return"
                 />
                 <CommandList>
@@ -315,7 +314,9 @@ const FormBanner = () => {
               />
               <Popover
                 open={open === "returnCalendar"}
-                onOpenChange={(state) => setOpen(state ? "returnCalendar" : null)}
+                onOpenChange={(state) =>
+                  setOpen(state ? "returnCalendar" : null)
+                }
               >
                 <PopoverTrigger asChild>
                   <Button
@@ -323,7 +324,7 @@ const FormBanner = () => {
                     variant="ghost"
                     className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
                   >
-                    <CalendarIcon className="size-3.5" />
+                    <CalendarIcon className="size-[16px]" />
                     <span className="sr-only">Select date</span>
                   </Button>
                 </PopoverTrigger>

@@ -56,13 +56,13 @@ function CommandInput({ className, ...props }) {
   return (
     <div
       data-slot="command-input-wrapper"
-      className="flex h-9 items-center gap-2 border-b px-3"
+      className="flex h-9 items-center gap-2 px-3 font-worksans font-normal"
     >
       <SearchIcon className="size-4 shrink-0 opacity-50" />
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
-          "placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
@@ -126,7 +126,7 @@ function CommandItem({ className, ...props }) {
         "relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm select-none outline-hidden",
         "data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50",
         // warna custom di sini
-        "data-[selected=true]:bg-gray-500 data-[selected=true]:text-white",
+        "data-[selected=true]:bg-accent/45 data-[selected=true]:text-black",
         "[&_svg:not([class*='text-'])]:text-muted-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
