@@ -1,5 +1,5 @@
 import Mainlayout from "../layouts/MainLayout";
-import Hero from "../components/home/hero/banner.jsx";
+import Hero from "../components/home/hero/hero.jsx";
 import InfoBlock from "../components/home/infoBlock/infoBlock.jsx";
 
 const Home = () => {

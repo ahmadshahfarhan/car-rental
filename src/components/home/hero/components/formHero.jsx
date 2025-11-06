@@ -40,7 +40,7 @@ const frameworks = [
   { value: "strapi", label: "Strapi" },
 ];
 
-const FormBanner = () => {
+const FormHero = () => {
   const [open, setOpen] = React.useState(null);
   const [month, setMonth] = React.useState();
   const [value, setValue] = React.useState({
@@ -368,4 +368,4 @@ const FormBanner = () => {
   );
 };
 
-export default FormBanner;
+export default FormHero;

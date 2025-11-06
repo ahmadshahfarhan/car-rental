@@ -1,8 +1,8 @@
-import FormBanner from "./components/formBanner";
+import FormBanner from "./components/formHero";
 import HeroComponents from "../../../assets/hero/Hero.png";
 import CarComponents from "../../../assets/hero/Car.png";
 
-const banner = () => {
+const Hero = () => {
   return (
     <>
       <section>
@@ -31,4 +31,4 @@ const banner = () => {
   );
 };
 
-export default banner;
+export default Hero;
