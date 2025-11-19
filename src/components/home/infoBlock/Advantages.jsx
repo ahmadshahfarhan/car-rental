@@ -1,6 +1,6 @@
 import { MapPinned, CarFront, Wallet } from "lucide-react";
 
-const infoBlock = () => {
+const Advantages = () => {
   return (
     <>
       <div className="flex items-center justify-between">
@@ -14,7 +14,7 @@ const infoBlock = () => {
           <h1 className=" font-semibold font-worksans text-[24px]">
             Availability
           </h1>
-          <p>
+          <p className=" text-[13px] font-inter font-normal w-[357px]">
             Kami siap melayani kapan pun Anda butuh. Armada kami tersedia setiap
             hari dengan berbagai pilihan mobil sesuai kebutuhan Anda.
           </p>
@@ -28,7 +28,7 @@ const infoBlock = () => {
             className=" mx-auto"
           />
           <h1 className="font-semibold font-worksans text-[24px]">Comfort</h1>
-          <p>
+          <p className="text-[13px] font-inter font-normal w-[357px]">
             Nikmati perjalanan tanpa khawatir. Setiap mobil kami dirawat secara
             rutin untuk memastikan pengalaman berkendara yang nyaman dan aman.
           </p>
@@ -42,7 +42,7 @@ const infoBlock = () => {
             className=" mx-auto"
           />
           <h1 className="font-semibold font-worksans text-[24px]">Savings </h1>
-          <p>
+          <p className="text-[13px] font-inter font-normal w-[357px]">
             Dapatkan harga sewa terbaik tanpa biaya tersembunyi. Kami menawarkan
             tarif yang transparan dan kompetitif untuk setiap perjalanan Anda.
           </p>
@@ -52,4 +52,4 @@ const infoBlock = () => {
   );
 };
 
-export default infoBlock;
+export default Advantages;
