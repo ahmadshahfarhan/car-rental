@@ -4,7 +4,7 @@ import Shadow from "../../../assets/banner/FactinNumber/Shadow.png";
 const FactsinNumber = () => {
   return (
     <>
-      <div className=" bg-primary rounded-[20px] mb-5 py-[60px] px-[72px] relative overflow-hidden">
+      <div className=" bg-primary rounded-[20px] py-[60px] px-[72px] relative overflow-hidden">
         <img src={Shadow} className=" absolute left-0 top-0" alt="" />
         <div className=" z-10 relative">
           <h1 className=" font-worksans font-bold text-[50px] text-surface text-center">
@@ -15,7 +15,7 @@ const FactsinNumber = () => {
             bibendum ullamcorper in. Diam tincidunt tincidunt erat at semper
             fermentum
           </p>
-          <div className=" flex justify-center gap-4 w-auto mt-[70px]">
+          <div className=" flex justify-center flex-wrap   gap-8 w-auto mt-[70px]"> 
             <div className=" bg-surface rounded-[20px] p-[16px] w-full max-w-[240px] ">
               <div className="flex items-center gap-x-3 font-worksans">
                 <CarFront

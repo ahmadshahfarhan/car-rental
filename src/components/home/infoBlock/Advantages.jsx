@@ -3,7 +3,7 @@ import { MapPinned, CarFront, Wallet } from "lucide-react";
 const Advantages = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-13 md:gap-0">
         <div className="text-center mx-auto font-inter font-normal text-[16px] space-y-3">
           <MapPinned
             size={64}

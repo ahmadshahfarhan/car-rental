@@ -2,8 +2,10 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <div className=" mx-[72px] max-w-[1366px]">
-        <Home />
+      <div className=" mx-auto max-w-[1376px]">
+        <div className="mx-[10px]">
+          <Home />
+        </div>
       </div>
     </>
   );

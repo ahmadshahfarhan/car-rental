@@ -3,9 +3,9 @@ import HeroImage from "../../../assets/infoBlock/HowitWorks.png";
 const HowitWorks = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center mx-auto gap-10 md:gap-16">
-        <img src={HeroImage} alt="" className="w-auto max-w-[45%]" />
-        <div className="space-y-6 w-auto max-w-[45%]">
+      <div className="flex flex-wrap justify-center items-center mx-auto gap-10 md:gap-16">
+        <img src={HeroImage} alt="" className=" w-full max-w-[500px] lg:max-w-[44%] object-cover rounded-[12px]" />
+        <div className="space-y-6 w-full max-w-[600px] lg:max-w-[44%]">
           <div>
             <div className=" flex items-center gap-x-2">
               <span className=" bg-primary text-white rounded-full w-[32px] h-[32px] p-1 text-center font-worksans font-semibold">
