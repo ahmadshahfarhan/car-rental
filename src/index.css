@@ -60,4 +60,9 @@
     @apply text-surface bg-accent py-[10.5px] px-[28px] font-semibold text-[16px] rounded-[12px];
     font-family: var(--font-inter);
   }
+
+  .btn-card {
+    @apply md:text-[16px] text-[13px] rounded-[12px] md:py-3 py-2 px-4 mt-4 w-full cursor-pointer transition-all;
+  }
 }
+
