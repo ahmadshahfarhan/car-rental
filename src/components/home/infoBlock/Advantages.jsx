@@ -6,12 +6,11 @@ const Advantages = () => {
       <div className="flex items-center justify-between flex-wrap gap-13 md:gap-0">
         <div className="text-center mx-auto font-inter font-normal text-[16px] space-y-3">
           <MapPinned
-            size={64}
-            strokeWidth={3.6}
+            strokeWidth={1.5}
             absoluteStrokeWidth
-            className="mx-auto"
+            className="mx-auto w-[54px] h-auto"
           />
-          <h1 className=" font-semibold font-worksans text-[24px]">
+          <h1 className=" font-semibold font-worksans md:text-[24px] text-[22px]">
             Availability
           </h1>
           <p className=" text-[13px] font-inter font-normal w-[357px]">
@@ -22,12 +21,13 @@ const Advantages = () => {
 
         <div className=" text-center mx-auto font-inter font-normal text-[16px] space-y-3">
           <CarFront
-            size={64}
-            strokeWidth={3.6}
+            strokeWidth={1.5}
             absoluteStrokeWidth
-            className=" mx-auto"
+            className="mx-auto w-[54px] h-auto"
           />
-          <h1 className="font-semibold font-worksans text-[24px]">Comfort</h1>
+          <h1 className="font-semibold font-worksans md:text-[24px] text-[22px]">
+            Comfort
+          </h1>
           <p className="text-[13px] font-inter font-normal w-[357px]">
             Nikmati perjalanan tanpa khawatir. Setiap mobil kami dirawat secara
             rutin untuk memastikan pengalaman berkendara yang nyaman dan aman.
@@ -36,12 +36,13 @@ const Advantages = () => {
 
         <div className=" text-center mx-auto font-inter font-normal text-[16px] space-y-3">
           <Wallet
-            size={64}
-            strokeWidth={3.6}
+            strokeWidth={1.5}
             absoluteStrokeWidth
-            className=" mx-auto"
+            className=" mx-auto w-[54px] h-auto"
           />
-          <h1 className="font-semibold font-worksans text-[24px]">Savings </h1>
+          <h1 className="font-semibold font-worksans md:text-[24px] text-[22px]">
+            Savings{" "}
+          </h1>
           <p className="text-[13px] font-inter font-normal w-[357px]">
             Dapatkan harga sewa terbaik tanpa biaya tersembunyi. Kami menawarkan
             tarif yang transparan dan kompetitif untuk setiap perjalanan Anda.

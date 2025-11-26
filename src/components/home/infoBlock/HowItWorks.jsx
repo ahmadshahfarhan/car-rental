@@ -5,7 +5,7 @@ const HowitWorks = () => {
     <>
       <div className="flex flex-wrap justify-center items-center mx-auto gap-10 md:gap-16">
         <img src={HeroImage} alt="" className=" w-full max-w-[500px] lg:max-w-[44%] object-cover rounded-[12px]" />
-        <div className="space-y-6 w-full max-w-[600px] lg:max-w-[44%]">
+        <div className="space-y-6 w-full max-w-[500px] lg:max-w-[44%] mx-6 md:mx-0">
           <div>
             <div className=" flex items-center gap-x-2">
               <span className=" bg-primary text-white rounded-full w-[32px] h-[32px] p-1 text-center font-worksans font-semibold">
@@ -20,7 +20,6 @@ const HowitWorks = () => {
               city car, SUV, hingga mobil keluarga.
             </p>
           </div>
-
           <div>
             <div className="flex items-center gap-x-2">
               <span className=" bg-primary text-white rounded-full w-[32px] h-[32px] p-1 text-center font-worksans font-semibold">
@@ -35,7 +34,6 @@ const HowitWorks = () => {
               mobil. Kami melayani antar-jemput di area tertentu.
             </p>
           </div>
-
           <div>
             <div className="flex items-center gap-x-2">
               <span className=" bg-primary text-white rounded-full w-[32px] h-[32px] p-1 text-center font-worksans font-semibold">
@@ -50,7 +48,6 @@ const HowitWorks = () => {
               Anda dengan mudah melalui sistem kami.
             </p>
           </div>
-
           <div>
             <div className="flex items-center gap-x-2">
               <span className=" bg-primary text-white rounded-full w-[32px] h-[32px] p-1 text-center font-worksans font-semibold">

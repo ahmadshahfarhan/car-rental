@@ -58,7 +58,7 @@ const FormHero = () => {
 
   return (
     <section>
-      <div className="bg-surface rounded-[20px] w-[416px] min-h-[480px] flex items-center justify-center">
+      <div className="bg-surface rounded-[20px] w-full min-w-xs lg:w-[416px] min-h-[480px] flex items-center justify-center">
         <form className="p-[40px] flex flex-col justify-center items-center gap-4 w-full">
           <label className="font-worksans font-semibold text-[28px] text-text-main">
             Book your car

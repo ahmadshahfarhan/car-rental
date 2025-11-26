@@ -67,7 +67,7 @@ const CardHighlights = () => {
 const Highlights = () => {
   return (
     <>
-      <div className=" mt-[120px]">
+      <div className=" md:mt-[120px] mt-[60px]">
         {/* title */}
         <div className=" flex flex-wrap justify-between">
           <h1 className=" font-worksans font-bold lg:text-[50px] sm:text-[40px] text-[32px] max-w-[500px] items-start lg:leading-[60px] sm:leading-[50px] leading-[40px]">

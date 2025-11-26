@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Mainlayout>
-        <div className=" space-y-[120px]">
+        <div className=" md:space-y-[120px] space-y-[60px]">
           <Hero />
           <Advantages />
           <HowItWorks />

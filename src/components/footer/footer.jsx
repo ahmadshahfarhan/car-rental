@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <>
       <div className="bg-transparent p-2 mt-[120px] mb-[20px]">
-        <img src={logo} className="object-scale-down flex" alt="" />
-        <div className=" grid md:grid-cols-4 grid-cols-2 gap-8 mt-8 md:mt-16">
-          <div className=" order-1">
+        <img src={logo} className="flex object-scale-down" alt="" />
+        <div className="flex flex-wrap justify-between gap-y-12 mt-6 md:mt-5">
+          <div>
             <p className=" font-worksans font-semibold text-[16px] md:text-[20px] max-w-[270px] leading-[23px]">
               Kami siap membantu Anda 24/7 untuk memenuhi kebutuhan penyewaan
               mobil Anda. Hubungi kami sekarang!
@@ -47,30 +47,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className=" order-2 flex-col inline-flex">
-            <label className=" font-worksans font-semibold text-[20px]">
-              Useful links
-            </label>
-            <ul className=" font-worksans font-normal text-[16px] mt-4 space-y-1 ">
-              <li>About us</li>
-              <li>Contact us</li>
-              <li>Blog</li>
-              <li>F.A.Q</li>
-            </ul>
-          </div>
-          <div className=" order-3">
-            <label className=" font-worksans font-semibold text-[20px]">
-              Vehicles
-            </label>
-            <ul className="font-worksans font-normal text-[16px] mt-4 space-y-1">
-              <li>SUV</li>
-              <li>Cars</li>
-              <li>Trucks</li>
-              <li>Minivan</li>
-              <li>Pickup</li>
-            </ul>
-          </div>
-          <div className="flex-col md:order-4 order-1">
+          <div className=" flex flex-col ">
             <div className=" flex gap-2">
               <MapPin className=" bg-accent rounded-full text-surface p-2 w-9 h-9" />
               <div className="font-worksans text-[16px]">
@@ -91,6 +68,31 @@ const Footer = () => {
                 <span className=" font-normal">Phone</span>
                 <h2 className=" font-semibold">+996 247-1680</h2>
               </div>
+            </div>
+          </div>
+          <div className="flex gap-x-16 gap-12">
+            <div>
+              <label className=" font-worksans font-semibold text-[20px]">
+                Useful links
+              </label>
+              <ul className=" font-worksans font-normal text-[16px] mt-4 space-y-1 ">
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Blog</li>
+                <li>F.A.Q</li>
+              </ul>
+            </div>
+            <div>
+              <label className=" font-worksans font-semibold text-[20px]">
+                Vehicles
+              </label>
+              <ul className="font-worksans font-normal text-[16px] mt-4 space-y-1">
+                <li>SUV</li>
+                <li>Cars</li>
+                <li>Trucks</li>
+                <li>Minivan</li>
+                <li>Pickup</li>
+              </ul>
             </div>
           </div>
         </div>
