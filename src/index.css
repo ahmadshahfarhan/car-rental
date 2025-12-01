@@ -13,10 +13,12 @@
   /* Text */
   --color-text-main: #1a1a1a; /*warna tebal */
   --color-text-muted: #555555; /*warna tipis */
+  --color-text-graycus: #f5f5f5; /*warna gray */ 
 
   /* Background */
   --color-main: #1a1a1a; /*warna tebal */
-  --color-muted: #555555; /*warna tipis */
+  --color-muted: #555555; /*warna tipis */ 
+  --color-graycus: #f5f5f5; /*warna gray */ 
 
   /* Border */
   --color-border: #e5e5e5;

@@ -6,7 +6,7 @@ const CardHighlights = () => {
   return (
     <>
       {Array.from({ length: 6 }).map((_, i) => (
-        <div key={i} className=" p-3 rounded-[12px]">
+        <div key={i} className=" p-[24px] rounded-[12px] bg-graycus">
           <img
             src={TesImage}
             className="mx-auto rounded-[12px] w-full"
