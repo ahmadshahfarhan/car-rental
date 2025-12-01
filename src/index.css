@@ -8,10 +8,15 @@
   /* Base colors */
   --color-bg: #ffffff;
   --color-surface: #fafafa;
+  --color-alt: #f6f6f6;
 
   /* Text */
   --color-text-main: #1a1a1a; /*warna tebal */
   --color-text-muted: #555555; /*warna tipis */
+
+  /* Background */
+  --color-main: #1a1a1a; /*warna tebal */
+  --color-muted: #555555; /*warna tipis */
 
   /* Border */
   --color-border: #e5e5e5;
@@ -27,7 +32,8 @@
 @import "@fontsource/work-sans/500.css"; /* medium */
 @import "@fontsource/work-sans/600.css"; /* semi-bold */
 @import "@fontsource/work-sans/700.css"; /* bold */
-@import "@fontsource/work-sans/800.css"; /* extra-bold */
+@import "@fontsource/work-sans/800.css";
+@import "tw-animate-css";
 
 :root {
   --font-inter: "Inter", sans-serif;
@@ -54,24 +60,9 @@
     @apply text-surface bg-accent py-[10.5px] px-[28px] font-semibold text-[16px] rounded-[12px];
     font-family: var(--font-inter);
   }
+
+  .btn-card {
+    @apply md:text-[16px] text-[13px] rounded-[12px] md:py-3 py-2 px-4 mt-4 w-full cursor-pointer transition-all;
+  }
 }
 
-.css-1u9des2-indicatorSeparator{
-  display: none;
-}
-
-.react-select__menu-list {
-  scrollbar-width: thin; /* Firefox */
-}
-
-.react-select__menu-list::-webkit-scrollbar {
-  width: 6px; /* Lebar scrollbar */
-}
-
-.react-select__menu-list::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-
-.react-select__menu-list::-webkit-scrollbar-track {
-  background: transparent;
-}
