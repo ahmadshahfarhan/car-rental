@@ -12,26 +12,28 @@ import {
   SheetTrigger,
 } from "../../components/ui/sheet.jsx";
 
+import { Link } from "react-router-dom"
+
 const links = [
   {
     label: "Home",
-    href: "/",
+    link: "/",
   },
   {
     label: "Vehicles",
-    href: "/vehicles",
+    link: "/vehicles",
   },
   {
     label: "Details",
-    href: "/details",
+    link: "/details",
   },
   {
     label: "About Us",
-    href: "/about",
+    link: "/about",
   },
   {
     label: "Contact Us",
-    href: "/contact",
+    link: "/contact",
   },
 ];
 
@@ -41,12 +43,12 @@ export function SidebarResponsive() {
       <SheetTrigger asChild>
         <Menu className=" cursor-pointer md:hidden block" />
       </SheetTrigger>
-      <SheetContent className="w-[250px]">
+      <SheetContent className="w-[220px]">
         <div className=" p-6 py-14">
           <ul className=" mx-auto flex flex-col justify-center gap-x-8 text-text-main font-inter font-medium space-y-2">
-            {links.map((link) => (
-              <li key={link.href} className="">
-                <a href={link.href}>{link.label}</a>
+            {links.map((nav) => (
+              <li key={nav.link} className="text-lg hover:text-xl transition-all">
+                <Link to={nav.link}>{nav.label}</Link>
               </li>
             ))}
           </ul>
@@ -72,10 +74,10 @@ const Navbar = () => {
     <nav>
       <div className=" flex items-center justify-between md:py-[28px] py-[17px]">
         <img src={logo} className="" alt="" />
-        <ul className=" mx-auto flex justify-center gap-x-8 text-text-main font-inter font-medium ">
-          {links.map((link) => (
-            <li key={link.href} className="  md:block hidden">
-              <a href={link.href}>{link.label}</a>
+        <ul className=" mx-auto flex justify-center gap-x-8 text-text-main font-inter font-medium">
+          {links.map((nav) => (
+            <li key={nav.link} className=" md:block hidden">
+              <Link to={nav.link}>{nav.label}</Link>
             </li>
           ))}
         </ul>
