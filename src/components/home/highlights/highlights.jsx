@@ -6,7 +6,10 @@ const CardHighlights = () => {
   return (
     <>
       {Array.from({ length: 6 }).map((_, i) => (
-        <div key={i} className=" p-[24px] rounded-[12px] bg-graycus">
+        <div
+          key={i}
+          className=" md:p-[24px] p-[12px] rounded-[12px] bg-graycus"
+        >
           <img
             src={TesImage}
             className="mx-auto rounded-[12px] w-full"
@@ -84,7 +87,7 @@ const Highlights = () => {
           </button>
         </div>
         {/* card highlights */}
-        <div className=" grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-y-7 mt-10">
+        <div className=" grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-y-7 gap-x-2 mt-10">
           <CardHighlights />
         </div>
       </div>

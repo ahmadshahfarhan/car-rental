@@ -24,10 +24,6 @@ const links = [
     link: "/vehicles",
   },
   {
-    label: "Details",
-    link: "/details",
-  },
-  {
     label: "About Us",
     link: "/about",
   },
