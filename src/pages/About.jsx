@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import icon from "../assets/Icon.png";
 import Introduction from "../components/about/Introduction/introduction";
 import DialogVideo from "../components/about/dialogVideo/dialogVideo";
+import InfoBlock from "../components/about/infoBlock/infoBlock";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
         <div className=" md:space-y-[120px] space-y-[60px]">
           <Introduction />
           <DialogVideo />
+          <InfoBlock />
         </div>
       </MainLayout>
     </>
