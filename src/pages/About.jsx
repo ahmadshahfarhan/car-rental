@@ -4,6 +4,7 @@ import icon from "../assets/Icon.png";
 import Introduction from "../components/about/Introduction/introduction";
 import DialogVideo from "../components/about/dialogVideo/dialogVideo";
 import InfoBlock from "../components/about/infoBlock/infoBlock";
+import Testimoni from "../components/about/testimoni/testimoni";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
           <Introduction />
           <DialogVideo />
           <InfoBlock />
+          <Testimoni />
         </div>
       </MainLayout>
     </>

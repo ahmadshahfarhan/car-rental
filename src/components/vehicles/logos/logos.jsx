@@ -1,4 +1,3 @@
-import { de } from "date-fns/locale";
 import logo1 from "../../../assets/vehicles/logos/Logo-1.png";
 import logo2 from "../../../assets/vehicles/logos/Logo-2.png";
 import logo3 from "../../../assets/vehicles/logos/Logo-3.png";
