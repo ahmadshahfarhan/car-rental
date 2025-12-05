@@ -39,7 +39,7 @@ function Hero() {
             />
           </div>
         </div>
-        <div className=" flex justify-between mt-[60px]">
+        <div className=" md:flex sm:flex-nowrap flex-nowrap space-y-3 justify-between gap-4 mt-[60px]">
           <div className=" flex gap-2">
             <MapPin className=" bg-accent rounded-full text-surface p-3 w-14 h-14" />
             <div className="font-worksans text-[16px]">

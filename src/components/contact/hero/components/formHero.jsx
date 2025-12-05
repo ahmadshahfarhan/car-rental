@@ -73,7 +73,7 @@ const FormHero = () => {
               <Button
                 role="combobox"
                 aria-expanded={open === "carType"}
-                className="w-full justify-between border-0 outline-none bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px]"
+                className="w-full justify-between border-0 outline-none bg-white/10 hover:bg-white/12 py-4 font-normal text-surface text-[16px]"
               >
                 {value.carType
                   ? frameworks.find((f) => f.value === value.carType)?.label
@@ -131,7 +131,7 @@ const FormHero = () => {
               <Button
                 role="combobox"
                 aria-expanded={open === "placeOfRental"}
-                className="w-full justify-between border-0 outline-none bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px]"
+                className="w-full justify-between border-0 outline-none  bg-white/10 hover:bg-white/12 text-surface py-4 font-normal text-[16px]"
               >
                 {value.placeOfRental
                   ? frameworks.find(
@@ -196,7 +196,7 @@ const FormHero = () => {
               <Button
                 role="combobox"
                 aria-expanded={open === "placeOfReturn"}
-                className="w-full justify-between border-0 outline-none bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px]"
+                className="w-full justify-between border-0 outline-none  bg-white/10 hover:bg-white/12 text-surface py-4 font-normal text-[16px]"
               >
                 {value.placeOfReturn
                   ? frameworks.find(
@@ -258,7 +258,7 @@ const FormHero = () => {
               <Input
                 id="date"
                 value={value.rentalDate ? value.rentalDate : "Rental date"}
-                className="bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px] outline-none border-0 outline-0"
+                className=" bg-white/10 hover:bg-white/12 text-surface py-4 font-normal text-[16px] outline-none border-0 outline-0"
                 readOnly
               />
               <Popover
@@ -271,7 +271,7 @@ const FormHero = () => {
                     variant="ghost"
                     className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
                   >
-                    <CalendarIcon className="size-3.5" />
+                    <CalendarIcon className="size-3.5 text-surface" />
                     <span className="sr-only">Select date</span>
                   </Button>
                 </PopoverTrigger>
@@ -309,7 +309,7 @@ const FormHero = () => {
               <Input
                 id="date"
                 value={value.returnDate ? value.returnDate : "Return date"}
-                className="bg-gray-50 hover:bg-gray-100 py-4 font-normal text-[16px] outline-none border-0 outline-0"
+                className=" bg-white/10 hover:bg-white/12 text-surface py-4 font-normal text-[16px] outline-none border-0 outline-0"
                 readOnly
               />
               <Popover
@@ -324,7 +324,7 @@ const FormHero = () => {
                     variant="ghost"
                     className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
                   >
-                    <CalendarIcon className="size-[16px]" />
+                    <CalendarIcon className="size-[16px] text-surface" />
                     <span className="sr-only">Select date</span>
                   </Button>
                 </PopoverTrigger>
