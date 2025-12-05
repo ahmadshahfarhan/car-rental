@@ -5,6 +5,8 @@ import Introduction from "../components/about/Introduction/introduction";
 import DialogVideo from "../components/about/dialogVideo/dialogVideo";
 import InfoBlock from "../components/about/infoBlock/infoBlock";
 import Testimoni from "../components/about/testimoni/testimoni";
+import Faq from "../components/about/faq/faq";
+import Banner from "../components/about/banner/banner";
 
 const About = () => {
   return (
@@ -19,6 +21,8 @@ const About = () => {
           <DialogVideo />
           <InfoBlock />
           <Testimoni />
+          <Faq />
+          <Banner />
         </div>
       </MainLayout>
     </>
