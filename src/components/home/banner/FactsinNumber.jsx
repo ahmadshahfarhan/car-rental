@@ -1,5 +1,6 @@
 import { CarFront, UserCheck, CalendarCheck, CircleGauge } from "lucide-react";
 import Shadow from "../../../assets/banner/FactinNumber/Shadow.png";
+import { NumberTicker } from "../../ui/number-ticker";
 
 const FactsinNumber = () => {
   return (
@@ -15,7 +16,7 @@ const FactsinNumber = () => {
             bibendum ullamcorper in. Diam tincidunt tincidunt erat at semper
             fermentum
           </p>
-          <div className=" flex justify-center flex-wrap   gap-8 w-auto mt-[70px]"> 
+          <div className=" flex justify-center flex-wrap   gap-8 w-auto mt-[70px]">
             <div className=" bg-surface rounded-[20px] p-[16px] w-full md:max-w-[240px] max-w-[300px]">
               <div className="flex items-center gap-x-3 font-worksans">
                 <CarFront
@@ -23,7 +24,13 @@ const FactsinNumber = () => {
                   size={48}
                 />
                 <div>
-                  <h1 className="uppercase font-bold text-[24px]">540+</h1>
+                  <div className=" flex items-center">
+                    <NumberTicker
+                      value={540}
+                      className="uppercase font-bold text-[24px]"
+                    />
+                    <span className="uppercase font-bold text-[24px]">+</span>
+                  </div>
                   <p className=" font-semibold text-[16px] text-text-muted">
                     Cars
                   </p>
@@ -37,7 +44,13 @@ const FactsinNumber = () => {
                   size={48}
                 />
                 <div>
-                  <h1 className="uppercase font-bold text-[24px]">20+</h1>
+                  <div className=" flex items-center">
+                    <NumberTicker
+                      value={20}
+                      className="uppercase font-bold text-[24px]"
+                    />
+                    <span className="uppercase font-bold text-[24px]">+</span>
+                  </div>
                   <p className=" font-semibold text-[16px] text-text-muted">
                     Customers
                   </p>
@@ -51,7 +64,13 @@ const FactsinNumber = () => {
                   size={48}
                 />
                 <div>
-                  <h1 className="uppercase font-bold text-[24px]">25+</h1>
+                  <div className=" flex items-center">
+                    <NumberTicker
+                      value={25}
+                      className="uppercase font-bold text-[24px]"
+                    />
+                    <span className="uppercase font-bold text-[24px]">+</span>
+                  </div>
                   <p className=" font-semibold text-[16px] text-text-muted">
                     Years
                   </p>
@@ -65,7 +84,13 @@ const FactsinNumber = () => {
                   size={48}
                 />
                 <div>
-                  <h1 className="uppercase font-bold text-[24px]">20m+</h1>
+                  <div className=" flex items-center">
+                    <NumberTicker
+                      value={20}
+                      className="uppercase font-bold text-[24px]"
+                    />
+                    <span className="font-bold text-[24px]">m+</span>
+                  </div>
                   <p className=" font-semibold text-[16px] text-text-muted">
                     Miles
                   </p>
